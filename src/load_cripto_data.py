@@ -5,14 +5,13 @@ from pathlib import Path
 import pandas as pd
 from dotenv import load_dotenv
 
-env_path = Path(__file__).resolve().parent.parent / '.config' / '.env'
+env_path = Path(__file__).resolve().parent.parent / 'config' / '.env'
 load_dotenv(env_path)
 
 user = os.getenv('user')
 password = os.getenv('password')
 database = os.getenv('database')
-# host = 'host.docker.internal'
-host = 'localhost'
+host = 'host.docker.internal'
 
 def get_engine() -> create_engine:
     print(f"Conectando no Database: {database} porta 5432")
