@@ -26,7 +26,7 @@ url = os.getenv('url_api')
 @dag(
     dag_id= 'Pipeline_Cripto',
     description='Pipeline ETL - Bitcoin',
-    schedule='0 */1 * * *',
+    schedule='*/5 * * * *',
     start_date=datetime(2026, 5, 13),
     catchup=False,
     default_args={
